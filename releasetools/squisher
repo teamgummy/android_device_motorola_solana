@@ -148,9 +148,7 @@ rm -rf $REPACK/ota/recovery
 # Determine what to name the new signed package
 REALDATE=`date +%F-%H_%M`
 
-MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
-OUTFILE=$OUT/$MODVERSION-squished.zip
-
+OUTFILE=$OUT/AOKP-4.0.3_r1-$TARGET_PRODUCT-$REALDATE.zip
 
 # Pack it up and sign
 printf "Zipping package..."

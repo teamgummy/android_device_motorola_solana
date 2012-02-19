@@ -256,9 +256,7 @@ $(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
 #$(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 $(call inherit-product-if-exists, vendor/verizon/solana-verizon-vendor.mk)
 
-
 $(call inherit-product-if-exists, vendor/motorola/solana/solana-vendor.mk)
-
 
 # stuff common to all Motorola phones -- disabled for Sandbox
 #$(call inherit-product, device/motorola/common/common_hijack.mk)

@@ -1,7 +1,7 @@
 # Inherit device configuration for Droid3.
 $(call inherit-product, device/motorola/solana/device_solana.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common aokp stuff.
 $(call inherit-product, vendor/aokp/products/common_phone.mk)
 
 # Inherit some common CM stuff.
@@ -45,7 +45,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
    BUILD_HOST=${DEVELOPER_HOST} \
    PRODUCT_DEFAULT_LANGUAGE=en \
    PRODUCT_DEFAULT_REGION=US \
-
-# Extra Droid3 overlay
-#PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/solana
-
