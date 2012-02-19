@@ -148,7 +148,7 @@ rm -rf $REPACK/ota/recovery
 # Determine what to name the new signed package
 REALDATE=`date +%F-%H_%M`
 
-OUTFILE=$OUT/AOKP-4.0.3_r1-$TARGET_PRODUCT-$REALDATE.zip
+OUTFILE=$OUT/AOKP-4.0.3_r1-solana-$REALDATE.zip
 
 # Pack it up and sign
 printf "Zipping package..."
