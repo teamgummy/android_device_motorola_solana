@@ -206,7 +206,9 @@ PRODUCT_COPY_FILES += \
 # Phone settings
 PRODUCT_COPY_FILES += \
     device/motorola/solana/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    vendor/aokp/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip \
+
+#    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
 
 
 # Graphics
