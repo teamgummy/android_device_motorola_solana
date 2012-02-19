@@ -2,7 +2,7 @@
 $(call inherit-product, device/motorola/solana/device_solana.mk)
 
 # Inherit some common aokp stuff.
-$(call inherit-product, vendor/aokp/products/common_phone.mk)
+$(call inherit-product, vendor/aokp/configs/common_phone.mk)
 
 # Inherit some common CM stuff.
 #$(call inherit-product, vendor/cm/config/gsm.mk)
