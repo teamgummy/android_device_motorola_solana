@@ -106,6 +106,45 @@ class EdifyGenerator(object):
     self.script.append('set_perm(0, 0, 0777, "/tmp/backuptool.sh");')
     self.script.append(('run_program("/tmp/backuptool.sh", "%s");' % command))
 
+  def RunChkKineto(self):
+    self.script.append('package_extract_file("system/bin/chkkineto.sh", "/tmp/chkkineto.sh");')
+    self.script.append('set_perm(0, 0, 0777, "/tmp/chkkineto.sh");')
+    self.script.append('run_program("/tmp/chkkineto.sh");')
+
+  def RunVerifyCachePartitionSize(self):
+    self.script.append('package_extract_file("system/bin/verify_cache_partition_size.sh", "/tmp/verify_cache_partition_size.sh");')
+    self.script.append('set_perm(0, 0, 0777, "/tmp/verify_cache_partition_size.sh");')
+    self.script.append('run_program("/tmp/verify_cache_partition_size.sh");')
+
+  def RunFormatAndTuneSystem(self):
+    mount_point = "/system"
+    self.script.append('package_extract_file("system/etc/releaseutils/mke2fs", "/tmp/mke2fs");')
+    self.script.append('set_perm(0, 0, 0777, "/tmp/mke2fs");')
+    self.script.append('package_extract_file("system/etc/releaseutils/tune2fs", "/tmp/tune2fs");')
+    self.script.append('set_perm(0, 0, 0777, "/tmp/tune2fs");')
+    self.script.append('unmount("%s");' % (mount_point))
+    fstab = self.info.get("fstab", None)
+    if fstab:
+      p = fstab[mount_point]
+      self.script.append('run_program("/tmp/mke2fs", "-g", "8192", "-m", "0", "-O", "none,has_journal,filetype", "-L", "system", "-U", "06836a22-bc34-1a0b-98ae-965e01a64a10", "%s");' %
+                         (p.device))
+      self.script.append('run_program("/tmp/tune2fs", "-c", "0", "-i", "0", "%s");' %
+                         (p.device))
+      self.mounts.add(p.mount_point)
+    else:
+      what = mount_point.lstrip("/")
+      what = self.info.get("partition_path", "") + what
+      self.script.append('run_program("/tmp/mke2fs", "-g", "8192", "-m", "0", "-O", "none,has_journal,filetype", "-L", "system", "-U", "06836a22-bc34-1a0b-98ae-965e01a64a10", "%s");' %
+                         (what))
+      self.script.append('run_program("/tmp/tune2fs", "-c", "0", "-i", "0", "%s");' %
+                         (what))
+      self.mounts.add(mount_point)
+
+  def RunFinalReleaseUtils(self):
+    self.script.append('package_extract_file("system/etc/releaseutils/finalize_release", "/tmp/finalize_release");')
+    self.script.append('set_perm(0, 0, 0777, "/tmp/finalize_release");')
+    self.script.append('run_program("/tmp/finalize_release");')
+
   def ShowProgress(self, frac, dur):
     """Update the progress bar, advancing it over 'frac' over the next
     'dur' seconds.  'dur' may be zero to advance it via SetProgress
