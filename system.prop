@@ -282,4 +282,15 @@ ro.ril.disable.power.collaspe=1
 pm.sleep_mode=1
 
 ro.rommanager.developerid=Hashcode
-ro.modversion=Droid3-ICS-Beta1
+ro.modversion=Droid3-MIUI-Beta1
+
+#Tweaks
+ro.kernel.android.checkjni=0
+ro.media.enc.jpeg.quality=100
+debug.sf.hw=1
+
+ro.config.ringtone=MI.ogg
+ro.config.notification_sound=FadeIn.ogg
+ro.config.alarm_alert=GoodMorning.ogg
+ro.config.sms_received_sound=FadeIn.ogg
+ro.config.sms_delivered_sound=MessageComplete.ogg
