@@ -24,30 +24,28 @@ vendor/miui/system/app/ContactsProvider.apk:/system/app/ContactsProvider.apk \
 vendor/miui/system/app/DownloadProvider.apk:/system/app/DownloadProvider.apk \
 vendor/miui/system/app/DownloadProviderUi.apk:/system/app/DownloadProviderUi.apk \
 vendor/miui/system/app/Launcher2.apk:/system/app/Launcher2.apk \
-vendor/miui/system/app/MiuiSystemUI.apk:/system/app/MIUISystemUI.apk \
 vendor/miui/system/app/Mms.apk:/system/app/Mms.apk \
 vendor/miui/system/app/Music.apk:/system/app/Music.apk \
 vendor/miui/system/app/SideKick.apk:/system/app/SideKick.apk \
 vendor/miui/system/app/TelephonyProvider.apk:/system/app/TelephonyProvider.apk \
 vendor/miui/system/app/TelocationProvider.apk:/system/app/TelocationProvider.apk \
-vendor/miui/system/app/ThemeManager.apk:/system/app/ThemeManager.apk \
 vendor/miui/system/app/Torch.apk:/system/app/Torch.apk \
 vendor/miui/system/app/Updater.apk:/system/app/Updater.apk \
 vendor/miui/system/app/AntiSpam.apk:/system/app/AntiSpam.apk \
 vendor/miui/system/app/Backup.apk:/system/app/Backup.apk \
 vendor/miui/system/app/BugReport.apk:/system/app/BugReport.apk \
 vendor/miui/system/app/CloudService.apk:/system/app/CloudService.apk \
-vendor/miui/system/app/LBESEC_MIUI.apk:/system/app/LBESEC_MIUI.apk \
-vendor/miui/system/app/MiuiHome.apk:/system/app/MiuiHome.apk \
 vendor/miui/system/app/MIUIStats.apk:/system/app/MIUIStats.apk \
 vendor/miui/system/app/BugReport.apk:/system/app/BugReport.apk \
 vendor/miui/system/app/Monitor.apk:/system/app/Monitor.apk \
 vendor/miui/system/app/PrivateEye.apk:/system/app/PrivateEye.apk \
 vendor/miui/system/etc/telocation.db:/system/etc/telocation.db \
 vendor/miui/system/etc/yellowpage.db:/system/etc/yellowpage.db \
+vendor/miui/system/framework/am.jar:/system/framework/am.jar \
 vendor/miui/system/framework/android.policy.jar:/system/framework/android.policy.jar \
 vendor/miui/system/framework/framework.jar:/system/framework/framework.jar \
-vendor/miui/system/framework/framework-miui-res.apk:/system/framework/framework-miui-res.apk \
+vendor/miui/system/framework/pm.jar:/system/framework/pm.jar \
+vendor/miui/system/framework/send_bug.jar:/system/framework/send_bug.jar \
 vendor/miui/system/framework/services.jar:/system/framework/services.jar \
 vendor/miui/system/lib/content-types.properties:/system/lib/content-types.properties \
 vendor/miui/system/lib/libandroid_runtime.so:/system/lib/libandroid_runtime.so \
@@ -176,7 +174,6 @@ vendor/miui/system/media/wallpaper/wallpaper_004.jpg:/system/media/wallpaper/wal
 vendor/miui/system/media/wallpaper/wallpaper_005.jpg:/system/media/wallpaper/wallpaper_005.jpg \
 vendor/miui/system/media/wallpaper/wallpaper_007.jpg:/system/media/wallpaper/wallpaper_007.jpg \
 vendor/miui/system/xbin/invoke-as:/system/xbin/invoke-as \
-vendor/miui/system/media/bootanimation.zip:/system/media/bootanimation.zip \
 
 # Audio
 PRODUCT_COPY_FILES += \
