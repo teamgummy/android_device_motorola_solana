@@ -7,6 +7,8 @@ $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 # Inherit some common CM stuff.
 #$(call inherit-product, vendor/cm/config/gsm.mk)
 
+/home/dhacker29/vendor_aokp/overlay/solana
+
 #
 # Setup device specific product configuration.
 #
