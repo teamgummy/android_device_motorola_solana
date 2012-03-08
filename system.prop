@@ -282,5 +282,5 @@ ro.ril.disable.power.collaspe=1
 pm.sleep_mode=1
 
 ro.rommanager.developerid=Hashcode
-ro.modversion=AOKP-solana-build-27
+ro.modversion=AOKP-solana-milestone-4
 
