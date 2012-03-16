@@ -65,6 +65,7 @@ rm $REPACK/ota/system/app/FmRxApp.apk
 rm $REPACK/ota/system/app/FmService.apk
 rm $REPACK/ota/system/app/FmTxApp.apk
 rm $REPACK/ota/system/app/RomManager.apk
+rm $REPACK/ota/system/app/Gallery2.apk
 
 
 if [ "$WANT_SQUASHFS" -eq 1 ]; then
