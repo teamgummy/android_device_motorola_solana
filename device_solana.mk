@@ -194,6 +194,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/solana/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     device/motorola/solana/prebuilt/etc/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
     device/motorola/solana/prebuilt/etc/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
+    device/motorola/solana/prebuilt/etc/spn-conf.xml:system/etc/spn-conf.xml \
     device/motorola/solana/prebuilt/etc/hijack-boot.zip:system/etc/hijack-boot.zip \
     device/motorola/solana/prebuilt/usr/idc/cpcap-key.idc:system/usr/idc/cpcap-key.idc \
     device/motorola/solana/prebuilt/usr/idc/light-prox.idc:system/usr/idc/light-prox.idc \
@@ -215,7 +216,6 @@ PRODUCT_COPY_FILES += \
 # Phone settings
 PRODUCT_COPY_FILES += \
     device/motorola/solana/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
 
 
 # Graphics
