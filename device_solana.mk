@@ -81,19 +81,6 @@ PRODUCT_PACKAGES += \
     hostap \
     hostapd.conf \
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    bt_sco_app \
-    uim-sysfs \
-
-# FM Radio
-#PRODUCT_PACKAGES += \
-#    com.ti.fm.fmradioif.xml \
-#    fmradioif \
-#    FmRxApp \
-#    FmTxApp \
-#    FmService \
-
 # Release utilities
 PRODUCT_PACKAGES += \
     solana_releaseutils-check_kernel \
@@ -256,6 +243,8 @@ PRODUCT_COPY_FILES += \
 # stuff specific to ti OMAP4 hardware
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
 $(call inherit-product, hardware/ti/camera/camera.mk)
+$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
+
 $(call inherit-product-if-exists, vendor/verizon/solana-verizon-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/motorola/solana/solana-vendor.mk)
